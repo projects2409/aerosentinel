@@ -1,0 +1,49 @@
+cd /Users/vansh/aerosentinel
+
+cat > .gitignore <<'EOF'
+# Frontend dependencies and build output
+**/node_modules/
+frontend/dist/
+frontend/build/
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+venv/
+.venv/
+backend/venv/
+backend/.venv/
+
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Model weights
+weights/
+backend/weights/
+*.pt
+*.pth
+*.onnx
+
+# Logs and local databases
+*.log
+*.db
+*.sqlite
+*.sqlite3
+
+# macOS
+.DS_Store
+
+# Runtime-generated AeroSentinel data
+backend/app/data/uploads/
+backend/app/data/reports/
+backend/app/data/reports.json
+backend/app/data/surveys.json
+backend/app/data/drone_state.json
+backend/app/data/changes.json
+backend/app/data/detections.json
